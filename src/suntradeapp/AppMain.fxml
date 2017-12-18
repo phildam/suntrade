@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.input.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:id="mainVBox" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="suntradeapp.AppMainController">
+     <children>
+        <MenuBar fx:id="menuBar" style="-fx-border-color: #909090; -fx-background-color: #E8E8E8;" VBox.vgrow="NEVER">
+            <menus>
+                <Menu fx:id="fileMenuItem" mnemonicParsing="false" text="File">
+                    <items>
+                  <MenuItem fx:id="print" mnemonicParsing="false" onAction="#getPrinterJob" text="Print" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem fx:id="preference" mnemonicParsing="false" onAction="#setPreference" text="Preferences…" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem fx:id="quit" mnemonicParsing="false" onAction="#quitApp" text="Quit" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="View">
+                    <items>
+                  <Menu mnemonicParsing="false" text="Skin">
+                    <items>
+                        <CheckMenuItem fx:id="defaultSkin" mnemonicParsing="false" onAction="#loanDefaultSkin" text="DefaultSkin" />
+                        <CheckMenuItem fx:id="skinBlue" mnemonicParsing="false" onAction="#loadSkinBlue" text="Skin Purple" />
+                        <CheckMenuItem fx:id="skinRed" mnemonicParsing="false" onAction="#loadSkinRed" text="Skin red" />
+                        <CheckMenuItem fx:id="skinTeal" mnemonicParsing="false" onAction="#loadSkinTeal" text="Skin Teal" />
+                        <CheckMenuItem fx:id="skinWhite" mnemonicParsing="false" onAction="#loadSkinWhite" text="Skin White" />
+                    </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Layout">
+                    <items>
+                      <MenuItem fx:id="regMode" mnemonicParsing="false" onAction="#loadRegMode" text="Reg Mode" />
+                              <MenuItem fx:id="mode5" mnemonicParsing="false" onAction="#loadMode5" text="Mode 5" />
+                        <MenuItem fx:id="traditor" mnemonicParsing="false" onAction="#loadTraditor" text="traditor" />
+                    </items>
+                  </Menu>
+                    </items>
+                </Menu>
+                <Menu fx:id="helpMenuItem" mnemonicParsing="false" text="Help">
+                    <items>
+                        <MenuItem fx:id="aboutSteec" mnemonicParsing="false" onAction="#loadAboutSteec" text="About Developer" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+      <ToolBar prefHeight="28.0" prefWidth="502.0" style="-fx-border-color: lightgrey;" VBox.vgrow="ALWAYS">
+         <items>
+            <Button id="BrowserButton" fx:id="accountOpener" layoutX="119.0" layoutY="0.023238854482769966" mnemonicParsing="false" onAction="#OpenNewAccount" prefHeight="25.0" prefWidth="64.0" styleClass="toolbarBut" text="open Account" textAlignment="CENTER">
+               <font>
+                  <Font size="9.0" />
+               </font>
+               <tooltip>
+                  <Tooltip text="Open New Account" />
+               </tooltip>
+            </Button>
+            <Button id="MediaButton" fx:id="loanApplicator" layoutX="76.0" layoutY="0.023238854482769966" mnemonicParsing="false" onAction="#ApplyForLoan" prefHeight="25.0" prefWidth="44.0" styleClass="toolbarBut" text="Apply for loan" textAlignment="CENTER">
+               <font>
+                  <Font size="9.0" />
+               </font>
+               <tooltip>
+                  <Tooltip text="Apply for Loan/Credit" />
+               </tooltip>
+            </Button>
+            <Button id="FileButton" fx:id="accountEditor" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="5.0" mnemonicParsing="false" onAction="#AccountEditor" prefHeight="25.0" prefWidth="44.0" styleClass="toolbarBut" text="Edit Account" textFill="#1804cd">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <tooltip>
+                  <Tooltip text="Edit customer Account" />
+               </tooltip>
+            </Button>
+            <Button id="RegisterButton" fx:id="GroupCreator" mnemonicParsing="false" onAction="#createGroup" prefHeight="8.0" prefWidth="49.0" styleClass="toolbarBut" text="Group View" textAlignment="CENTER">
+               <tooltip>
+                  <Tooltip text="Group Editor" />
+               </tooltip></Button>
+            <Button id="BrowserButton" fx:id="transactionViwer" mnemonicParsing="false" onAction="#loadTransaction" prefHeight="9.0" prefWidth="49.0" styleClass="toolbarBut" text="Transaction" textAlignment="CENTER">
+               <tooltip>
+                  <Tooltip text="Saving and Withdrawal Transaction Manager" />
+               </tooltip></Button>
+            <Separator prefHeight="25.0" prefWidth="538.0" visible="false" />
+         </items>
+      </ToolBar>
+      <AnchorPane fx:id="AppLoader" prefHeight="506.0" prefWidth="900.0" VBox.vgrow="ALWAYS">
+         <children>
+            <AnchorPane id="frontPageBg" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="511.0" prefWidth="900.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <GridPane hgap="20.0" layoutX="82.0" layoutY="39.0" vgap="20.0" AnchorPane.bottomAnchor="22.0" AnchorPane.leftAnchor="80.0" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="39.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <AnchorPane styleClass="buttAnchor">
+                           <children>
+                              <Button id="accountButt" fx:id="openAccount" layoutX="15.0" layoutY="15.0" mnemonicParsing="false" onAction="#openAccount" prefHeight="66.0" prefWidth="52.0" styleClass="frontpage" text="OPEN ACCOUNT" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+                                 <effect>
+                                    <DropShadow>
+                                       <input>
+                                          <DropShadow height="16.3425" radius="7.293125" width="14.83" />
+                                       </input>
+                                    </DropShadow>
+                                 </effect>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="buttAnchor" GridPane.columnIndex="2">
+                           <children>
+                              <Button id="loanButt" fx:id="applyForLoan" mnemonicParsing="false" onAction="#applyForLoan" prefHeight="66.0" prefWidth="52.0" styleClass="frontpage" text="APPLY FOR LOAN" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+                                 <effect>
+                                    <DropShadow>
+                                       <input>
+                                          <DropShadow />
+                                       </input>
+                                    </DropShadow>
+                                 </effect>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="buttAnchor" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <children>
+                              <Button id="transactionButt" fx:id="makeTransactions" mnemonicParsing="false" onAction="#makeTransactions" prefHeight="66.0" prefWidth="52.0" styleClass="frontpage" text="TRANSACTIONS" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+                                 <effect>
+                                    <DropShadow>
+                                       <input>
+                                          <DropShadow />
+                                       </input>
+                                    </DropShadow>
+                                 </effect>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="buttAnchor" GridPane.rowIndex="2">
+                           <children>
+                              <Button id="editorButt" fx:id="accountEditor1" mnemonicParsing="false" onAction="#accountEditor" prefHeight="66.0" prefWidth="52.0" styleClass="frontpage" text="ACCOUNT EDITOR" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+                                 <effect>
+                                    <DropShadow>
+                                       <input>
+                                          <DropShadow />
+                                       </input>
+                                    </DropShadow>
+                                 </effect>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="buttAnchor" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                           <children>
+                              <Button id="groupViewButt" fx:id="groupView" mnemonicParsing="false" onAction="#groupView" prefHeight="66.0" prefWidth="52.0" styleClass="frontpage" text="GROUP'S VIEW" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+                                 <effect>
+                                    <DropShadow>
+                                       <input>
+                                          <DropShadow />
+                                       </input>
+                                    </DropShadow>
+                                 </effect>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+        <HBox id="HBox" alignment="CENTER_LEFT" prefHeight="25.0" prefWidth="900.0" spacing="5.0">
+            <children>
+                <Label maxHeight="1.7976931348623157E308" maxWidth="-1.0" prefHeight="26.0" prefWidth="254.0" text="SunTrade " HBox.hgrow="ALWAYS">
+                    <font>
+                        <Font name="System Bold Italic" size="17.0" fx:id="x31" />
+                    </font>
+                    <textFill>
+                        <Color blue="0.625" green="0.625" red="0.625" fx:id="x41" />
+                    </textFill>
+                </Label>
+                <Pane prefHeight="19.0" prefWidth="584.0" HBox.hgrow="ALWAYS" />
+                <Label fx:id="rigthstatusLabel" font="$x31" maxWidth="-1.0" prefHeight="16.0" prefWidth="334.0" text="Application Running......." textFill="$x41" HBox.hgrow="NEVER" />
+            </children>
+            <padding>
+                <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+            </padding>
+        </HBox>
+    </children>
+</VBox>

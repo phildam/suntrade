@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<TabPane side="LEFT" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="suntradeapp.AccouintEditorController">
+   <tabs>
+      <Tab closable="false" text="Customer Account Editor">
+         <content>
+            <SplitPane dividerPositions="0.5, 0.5">
+               <items>
+                  <AnchorPane maxWidth="-Infinity" prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="accountNumberSearch" layoutX="1.0" layoutY="2.0" onKeyReleased="#getaccountDetails" prefHeight="25.0" promptText="Enter pass Book number to search" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0" />
+                        <ImageView fx:id="picture" fitHeight="138.0" fitWidth="131.0" layoutX="14.0" layoutY="48.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="14.0">
+                           <image>
+                              <Image url="@../../../../../Pictures/Picasa/business_user_edt.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="changepic" layoutX="29.0" layoutY="201.0" minWidth="-Infinity" mnemonicParsing="false" onAction="#changePicture" prefHeight="25.0" prefWidth="79.0" text="upload new" AnchorPane.leftAnchor="29.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane id="AnchorPane" minWidth="200.0" prefHeight="549.0" prefWidth="600.0" styleClass="mainFxmlClass">
+                     <children>
+                        <BorderPane layoutY="24.0" maxWidth="-Infinity" minWidth="200.0" prefHeight="525.0" prefWidth="400.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <center>
+                              <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minWidth="200.0" prefHeight="560.0" prefWidth="480.0" style="-fx-background-radius: 30; -fx-background-color: white;">
+                                 <children>
+                                    <ScrollPane fitToHeight="true" fitToWidth="true" layoutX="-9.0" layoutY="-9.0" prefHeight="568.0" prefViewportHeight="575.0" prefViewportWidth="498.0" prefWidth="480.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <content>
+                                          <VBox fx:id="detailsPane" layoutY="21.0" maxHeight="-Infinity" maxWidth="-Infinity" minWidth="200.0" prefHeight="557.0" prefWidth="480.0" spacing="5.0" style="-fx-padding: 10; -fx-background-radius: 30; -fx-border-radius: 30;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" BorderPane.alignment="CENTER">
+                                             <children>
+                                                <TextField fx:id="surname" promptText="Surname" />
+                                                <TextField fx:id="othernames" promptText="Other Names" />
+                                                <ChoiceBox fx:id="gender" prefHeight="25.0" prefWidth="819.0" />
+                                                <TextField fx:id="email" promptText="Email" />
+                                                <ChoiceBox fx:id="maritalstatus" prefHeight="25.0" prefWidth="821.0" />
+                                                <TextField fx:id="occupation" promptText="Occupation" />
+                                                <TextField fx:id="phoneNumber" promptText="Phone Number" />
+                                                <ChoiceBox fx:id="groupName" prefHeight="25.0" prefWidth="817.0" />
+                                                <TextField fx:id="address" promptText="Address" />
+                                                <DatePicker fx:id="dob" editable="false" maxHeight="27.0" prefHeight="27.0" prefWidth="847.0" promptText="Date of Birth" showWeekNumbers="true" />
+                                                <TextField fx:id="state" promptText="State" />
+                                                <TextField fx:id="lga" promptText="L.G.A." />
+                                                <DatePicker fx:id="issuingDate" editable="false" maxHeight="27.0" prefHeight="27.0" prefWidth="897.0" promptText="Issuing Date" showWeekNumbers="true" />
+                                                <TextField fx:id="issuingName" promptText="IssuingName" />
+                                                <AnchorPane minWidth="200.0">
+                                                   <children>
+                                                      <Button fx:id="updateAccount" layoutX="183.0" mnemonicParsing="false" onAction="#doAccountUpdate" prefHeight="25.0" prefWidth="100.0" text="Update " AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="183.0" AnchorPane.rightAnchor="175.0" AnchorPane.topAnchor="0.0" />
+                                                   </children>
+                                                </AnchorPane>
+                                                <HBox spacing="5.0">
+                                                   <children>
+                                                      <AnchorPane prefHeight="25.0" prefWidth="448.0">
+                                                         <children>
+                                                            <Button fx:id="deleteAccount" mnemonicParsing="false" onAction="#deleteAccount" prefHeight="25.0" prefWidth="146.0" text="Delete Account" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                                            <Button fx:id="deactivateAccount" layoutX="151.0" mnemonicParsing="false" onAction="#AccountDeactivator" prefHeight="25.0" prefWidth="147.0" text="Deactivate Account" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                                         </children>
+                                                      </AnchorPane>
+                                                   </children>
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                </HBox>
+                                                <Label fx:id="infoLabel" prefHeight="27.0" prefWidth="608.0">
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                             </children>
+                                             <effect>
+                                                <DropShadow />
+                                             </effect>
+                                             <padding>
+                                                <Insets top="20.0" />
+                                             </padding>
+                                          </VBox>
+                                       </content>
+                                    </ScrollPane>
+                                 </children>
+                                 <effect>
+                                    <DropShadow height="38.79" radius="24.765" width="62.27" />
+                                 </effect>
+                                 <BorderPane.margin>
+                                    <Insets />
+                                 </BorderPane.margin>
+                              </AnchorPane>
+                           </center>
+                        </BorderPane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane maxWidth="-Infinity" prefHeight="200.0" prefWidth="400.0">
+                     <children>
+                        <ListView fx:id="listDetails" maxWidth="-Infinity" minWidth="100.0" prefHeight="549.0" prefWidth="292.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
+               </items>
+            </SplitPane>
+         </content>
+      </Tab>
+      <Tab closable="false" text="Group's Editor">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <BorderPane layoutX="348.0" layoutY="129.0" prefHeight="578.0" prefWidth="1212.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <center>
+                        <VBox fx:id="vloader" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="400.0" prefWidth="400.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+                           <effect>
+                              <DropShadow height="65.48" radius="27.05" width="44.72" />
+                           </effect>
+                           <children>
+                              <Pane fx:id="loadPane" prefHeight="420.0" prefWidth="400.0">
+                                 <children>
+                                    <ChoiceBox fx:id="groupList" layoutX="31.0" layoutY="50.0" prefWidth="150.0" visible="false" />
+                                    <TextField fx:id="newGroupName" layoutX="214.0" layoutY="50.0" promptText="New Name" visible="false" />
+                                    <Button fx:id="updateGroup" disable="true" layoutX="173.0" layoutY="85.0" mnemonicParsing="false" onAction="#editExistingGroup" opacity="0.0" text="Update" visible="false" />
+                                    <Label alignment="CENTER" layoutX="31.0" layoutY="14.0" prefHeight="27.0" prefWidth="327.0" text="Edit Existing Group " visible="false">
+                                       <font>
+                                          <Font name="System Bold Italic" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="CENTER" layoutX="35.0" layoutY="164.0" prefHeight="25.0" prefWidth="337.0" text="Create New Group">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="createNewGroups" layoutX="28.0" layoutY="211.0" prefHeight="25.0" prefWidth="216.0" promptText="Add New Group" />
+                                    <Button fx:id="createGroup" layoutX="266.0" layoutY="211.0" mnemonicParsing="false" onAction="#createNewGroup" prefHeight="25.0" prefWidth="98.0" text="Create" />
+                                    <ChoiceBox fx:id="groupListdel" layoutX="23.0" layoutY="300.0" prefHeight="25.0" prefWidth="344.0" />
+                                    <Button fx:id="deleteGroup" layoutX="158.0" layoutY="334.0" mnemonicParsing="false" onAction="#deleteGroup" prefHeight="25.0" prefWidth="81.0" text="Delete" />
+                                    <Label alignment="CENTER" layoutX="26.0" layoutY="275.0" prefHeight="25.0" prefWidth="337.0" text="Delete Group">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="editExistingGroupLabel" layoutX="35.0" layoutY="118.0" prefHeight="17.0" prefWidth="352.0" />
+                                    <Label fx:id="createNewLabel" layoutX="28.0" layoutY="245.0" prefHeight="17.0" prefWidth="340.0" />
+                                    <Label fx:id="delgrouplabel" layoutX="31.0" layoutY="369.0" prefHeight="17.0" prefWidth="345.0" />
+                                 </children>
+                              </Pane>
+                           </children>
+                        </VBox>
+                     </center>
+                  </BorderPane>
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+   </tabs>
+</TabPane>

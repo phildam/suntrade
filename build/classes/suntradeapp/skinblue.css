@@ -1,0 +1,110 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+
+
+
+#regform{
+    -fx-background-image:url(../icons/skinBlue.png);
+    -fx-opacity:1;
+}
+
+BorderPane{
+    -fx-background-image: url(../icons/skinBlue.png);
+    -fx-background-repeat:no-repeat;
+    -fx-background-size:cover;
+   // -fx-background-image: url(/images/hdbackground.jpg);
+    -fx-border-color:navy;
+    
+}
+TabPane Tab{
+    
+}
+TextField,DatePicker{
+    -fx-prompt-text-fill:navy;
+    -fx-border-color:navy;
+    -fx-border-radius:10;
+    -fx-background-radius:10;
+    -fx-pref-height:18;
+    -fx-max-height:20;
+}
+Label{
+    -fx-text-fill:navy;
+}
+Button{
+    -fx-background-color: navy;
+    -fx-text-fill:white;
+    -fx-border-radius:10;
+    -fx-background-radius:10;
+}
+Button:hover{
+    -fx-background-color:rgba(0,0,0,0.5);
+    
+}
+RadioButton{
+   // -fx-background-color: #4d95f2;
+    -fx-text-fill:navy;
+    -fx-background-radius:20;
+    -fx-min-width:200;
+    -fx-padding:5;
+}
+Label{
+    
+}
+RadioButton:hover{
+    -fx-background-color: navy;
+    -fx-text-fill: white;
+}
+
+
+.frontpage{
+    
+    -fx-text-fill: navy;
+    -fx-border-color: white;
+    -fx-border-radius: 500;
+    -fx-background-radius: 500;
+    -fx-background-color: rgba(0,0,0,0.3);
+    -fx-font: italic bold 20 san-serif;
+}
+
+.frontpage:hover{
+    -fx-text-fill: white;
+    -fx-background-color: transparent;
+    -fx-border-color: white;
+    -fx-scale-shape: true;
+    -fx-font: italic bold 16 san-serif;
+    
+}
+
+#frontPageBg{
+    -fx-background-image: url(../icons/skinBlue.png);
+    -fx-background-repeat:no-repeat;
+    -fx-background-size:cover;
+    // -fx-background-color: rgb(0,0,0);
+}
+
+.toolbarBut {
+    -fx-background-color:transparent;
+}
+
+.toolbarBut:hover{
+    -fx-border-radius:0;
+    -fx-border-color: white;
+    -fx-border-color:rgba(0,0,0,0.2);
+    -fx-background-color:transparent;
+}
+
+//login bg
+GridPane{
+    //-fx-background-color:rgba(0,0,0,0.5);
+  //  -fx-background-image: url(../icons/blackBg.png);
+  //  -fx-background-repeat:no-repeat;
+  //  -fx-background-size:cover;
+}
+.texty{
+    -fx-text-fill:navy;
+}

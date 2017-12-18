@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="g33k" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="suntradeapp.AboutMeController">
+   <children>
+      <Button fx:id="closeButton" layoutX="562.0" layoutY="14.0" mnemonicParsing="false" onAction="#closeStage" style="-fx-background-color: rgba(0,0,0,0.3);" text="X" textFill="#e40a0a" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <BorderPane layoutX="-3.0" layoutY="37.0" prefHeight="361.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="37.0">
+         <bottom>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="philsoft production 2015" wrappingWidth="484.0" BorderPane.alignment="CENTER" />
+         </bottom>
+         <center>
+            <HBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="176.0" prefWidth="347.0" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox prefHeight="176.0" prefWidth="178.0" spacing="20.0">
+                     <children>
+                        <TextField editable="false" text="Developer" />
+                        <TextField editable="false" text="Alias" GridPane.rowIndex="1" />
+                        <TextField editable="false" text="Contact" GridPane.rowIndex="2" />
+                        <TextField editable="false" text="Email" GridPane.rowIndex="3" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="176.0" prefWidth="202.0" spacing="20.0">
+                     <children>
+                        <TextField editable="false" text="Adeyeye Philip D" GridPane.columnIndex="1" />
+                        <TextField editable="false" text="phildam" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField editable="false" text=" 08109167559 / 08039506787" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <TextField editable="false" text="philcorp33@gmail.com" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

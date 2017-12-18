@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-reverse-engineering-3.0.dtd">
+<hibernate-reverse-engineering>
+    <schema-selection match-schema="SUNTRADE"/>
+    <table-filter match-name="GROUPS"/>
+    <table-filter match-name="TRANSACT"/>
+    <table-filter match-name="CUSTOMER"/>
+    <table-filter match-name="ACCOUNT"/>
+    <table-filter match-name="LOAN"/>
+    <table-filter match-name="LOANREPAYMENT"/>
+    <table-filter match-name="SETTING"/>
+  <table-filter match-name="DATABASESET"/>
+</hibernate-reverse-engineering>

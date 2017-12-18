@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Feb 12, 2016 2:24:21 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="entities.Loanrepayment" table="LOANREPAYMENT" schema="SUNTRADE">
+        <id name="loanId" type="int">
+            <column name="LOAN_ID" />
+            <generator class="native"></generator>
+        </id>
+        <property name="customerLoanNumber" type="string">
+            <column name="CUSTOMER_LOAN_NUMBER" length="250" />
+        </property>
+        <property name="paydate" type="date">
+            <column name="PAYDATE" length="10" />
+        </property>
+        <property name="amount" type="java.lang.Double">
+            <column name="AMOUNT" precision="52" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>

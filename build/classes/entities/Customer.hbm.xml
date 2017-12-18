@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Feb 12, 2016 2:24:21 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="entities.Customer" table="CUSTOMER" schema="SUNTRADE">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="native"></generator>
+        </id>
+        <property name="surname" type="string">
+            <column name="SURNAME" length="100" />
+        </property>
+        <property name="otherNames" type="string">
+            <column name="OTHER_NAMES" length="100" />
+        </property>
+        <property name="gender" type="string">
+            <column name="GENDER" length="100" />
+        </property>
+        <property name="maritalStatus" type="string">
+            <column name="MARITAL_STATUS" length="100" />
+        </property>
+        <property name="email" type="string">
+            <column name="EMAIL" length="100" />
+        </property>
+        <property name="occupation" type="string">
+            <column name="OCCUPATION" length="100" />
+        </property>
+        <property name="groupName" type="string">
+            <column name="GROUP_NAME" length="250" />
+        </property>
+        <property name="phoneNumber" type="string">
+            <column name="PHONE_NUMBER" length="100" />
+        </property>
+        <property name="address" type="string">
+            <column name="ADDRESS" length="250" />
+        </property>
+        <property name="country" type="string">
+            <column name="COUNTRY" length="100" />
+        </property>
+        <property name="state" type="string">
+            <column name="STATE" length="100" />
+        </property>
+        <property name="lga" type="string">
+            <column name="LGA" length="100" />
+        </property>
+        <property name="dob" type="date">
+            <column name="DOB" length="10" />
+        </property>
+        <property name="isuingDate" type="date">
+            <column name="ISUING_DATE" length="10" />
+        </property>
+        <property name="pictureurl" type="string">
+            <column name="PICTUREURL" length="250" />
+        </property>
+        <property name="issuingName" type="string">
+            <column name="ISSUING_NAME" length="100" />
+        </property>
+        <many-to-one name="accountNumber" class="entities.Account">
+            <column name="ACCOUNT_NUMBER" length="250" not-null="true" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

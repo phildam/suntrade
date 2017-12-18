@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<SplitPane dividerPositions="0.5, 0.5" prefHeight="579.0" prefWidth="719.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="suntradeapp.SunTradeTransactionController">
+  <items>
+      <SplitPane dividerPositions="0.054474708171206226, 0.5" maxWidth="-Infinity" minWidth="0.0" orientation="VERTICAL" prefHeight="483.0" prefWidth="300.0">
+         <items>
+            <VBox maxHeight="-Infinity" prefHeight="80.0">
+               <children>
+                  <HBox maxHeight="30.0">
+                     <children>
+                        <TextField fx:id="entityAccountNumber" onKeyTyped="#checkDigit" prefHeight="25.0" prefWidth="265.0" promptText="Enter Account Number to transact" style="-: red;">
+                           <tooltip>
+                              <Tooltip text="Enter AccountNumber Here to carry out Transactions" />
+                           </tooltip></TextField>
+                        <Button fx:id="get" mnemonicParsing="false" onAction="#getAccountDetails" prefHeight="25.0" prefWidth="93.0" text="Ok" />
+                     </children>
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
+                  </HBox>
+                  <Label fx:id="getInformation" prefHeight="17.0" prefWidth="369.0" textFill="RED" />
+                  <ProgressIndicator fx:id="progress" prefHeight="20.0" prefWidth="20.0" />
+               </children>
+            </VBox>
+            <AnchorPane minHeight="0.0" prefHeight="225.0" prefWidth="300.0">
+               <children>
+                  <VBox layoutY="33.0" prefHeight="221.0" prefWidth="355.0" spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="33.0">
+                     <children>
+                        <ImageView fx:id="customerImage" fitHeight="92.0" fitWidth="208.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../Pictures/icons/collections-menu-icon.png" />
+                           </image>
+                        </ImageView>
+                        <TextField fx:id="surname" editable="false" promptText="Surname">
+                           <tooltip>
+                              <Tooltip text="Account Holder Surname" />
+                           </tooltip></TextField>
+                        <TextField fx:id="othername" editable="false" promptText="othername">
+                           <tooltip>
+                              <Tooltip text="Account Holder Othernames" />
+                           </tooltip></TextField>
+                        <TextField fx:id="groupname" editable="false" promptText="Group Name">
+                           <tooltip>
+                              <Tooltip text="Account Holder Group" />
+                           </tooltip></TextField>
+                        <TextField fx:id="accountbalance" editable="false" promptText="Account Balance">
+                           <tooltip>
+                              <Tooltip text="Current Amount in Savings Account" />
+                           </tooltip>
+                        </TextField>
+                        <TextField fx:id="loanBalance" editable="false" promptText="Loan Balance" visible="false">
+                           <tooltip>
+                              <Tooltip text="Remaining Loan Balance" />
+                           </tooltip>
+                        </TextField>
+                     </children>
+                     <padding>
+                        <Insets left="5.0" right="5.0" />
+                     </padding>
+                  </VBox>
+                  <Label alignment="CENTER" prefHeight="30.0" prefWidth="300.0" text="Account Information" textFill="TEAL" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <font>
+                        <Font name="System Bold Italic" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <TabPane maxHeight="1.7976931348623157E308" prefHeight="300.0" prefWidth="300.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="Withdraw From Account">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="-Infinity" prefHeight="231.0" prefWidth="300.0">
+                           <children>
+                              <VBox layoutY="33.0" prefHeight="221.0" prefWidth="355.0" spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="33.0">
+                                 <children>
+                                    <DatePicker fx:id="dateOfWithdrawal" prefHeight="25.0" prefWidth="350.0" promptText="Date of WithDrawal" />
+                                    <TextField fx:id="amounttoWithdraw" onKeyTyped="#checkValidWithdrawalAmount" prefHeight="25.0" prefWidth="132.0" promptText="Withdrawal Amount" />
+                                    <Button fx:id="withdraw" mnemonicParsing="false" onAction="#transactWithdrawal" prefHeight="25.0" prefWidth="113.0" text="Withdraw" />
+                                    <Label fx:id="withdrawInfoLabel" alignment="CENTER" prefHeight="30.0" prefWidth="363.0" textFill="TEAL">
+                                       <font>
+                                          <Font name="System Bold Italic" size="12.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" />
+                                 </padding>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                </Tab>
+                <Tab text="Save to Account">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="-Infinity" prefHeight="514.0" prefWidth="300.0">
+                           <children>
+                              <VBox layoutX="118.0" layoutY="33.0" prefHeight="221.0" prefWidth="355.0" spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="33.0">
+                                 <children>
+                                    <DatePicker fx:id="depositorWithdrawalDate" prefHeight="25.0" prefWidth="361.0" promptText="Date of Deposit" />
+                                    <TextField fx:id="depositAmount" promptText="Deposit Amount">
+                                       <tooltip>
+                                          <Tooltip text="Amount to deposit" />
+                                       </tooltip></TextField>
+                                    <ChoiceBox fx:id="depositType" prefHeight="25.0" prefWidth="358.0" />
+                                    <HBox prefHeight="11.0" prefWidth="355.0" spacing="5.0">
+                                       <children>
+                                          <Button fx:id="deposit" mnemonicParsing="false" onAction="#TransactionDeposit" text="Deposit" />
+                                       </children>
+                                    </HBox>
+                                    <Label fx:id="depositInfoLabel" alignment="CENTER" prefHeight="30.0" prefWidth="354.0" textFill="TEAL">
+                                       <font>
+                                          <Font name="System Bold Italic" size="12.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" />
+                                 </padding>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                </Tab>
+                  <Tab fx:id="payloan" text="Payback Loan">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="-Infinity" prefHeight="514.0" prefWidth="300.0">
+                           <children>
+                              <VBox layoutX="118.0" layoutY="33.0" prefHeight="221.0" prefWidth="355.0" spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="33.0">
+                                 <children>
+                                    <TextField promptText="Loan Id" visible="false" />
+                                    <TextField fx:id="loanAmount" onKeyReleased="#checkLoanAmountValidity" promptText="Loan Payment Amount">
+                                       <tooltip>
+                                          <Tooltip text="Amount to pay back" />
+                                       </tooltip></TextField>
+                                    <DatePicker fx:id="loanPaybackDate" prefHeight="25.0" prefWidth="361.0" promptText="Date of Loan Payment" />
+                                    <HBox prefHeight="11.0" prefWidth="355.0" spacing="5.0">
+                                       <children>
+                                          <Button fx:id="payLoan" mnemonicParsing="false" onAction="#TransactionLoanPayement" text="Pay Loan" />
+                                       </children>
+                                    </HBox>
+                                    <Label fx:id="loanInfoLabel" alignment="CENTER" prefHeight="30.0" prefWidth="354.0" textFill="TEAL">
+                                       <font>
+                                          <Font name="System Bold Italic" size="12.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" />
+                                 </padding>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+         </items>
+      </SplitPane>
+      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="25.0" prefWidth="598.0" text="Transaction Information View" textFill="TEAL" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Label>
+            <TabPane layoutY="26.0" AnchorPane.bottomAnchor="-27.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="26.0">
+               <tabs>
+                  <Tab closable="false" text="Withdraw/Savings Transaction">
+                     <content>
+                        <AnchorPane fx:id="printWithdrawal" prefHeight="518.0" prefWidth="105.0">
+                           <children>
+                              <ScrollPane fitToHeight="true" fitToWidth="true" layoutY="104.0" prefHeight="392.0" prefViewportHeight="514.0" prefViewportWidth="105.0" prefWidth="105.0" AnchorPane.bottomAnchor="53.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="104.0">
+                                 <content>
+                                    <TableView fx:id="depositTv" prefHeight="396.0" prefWidth="103.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <tooltip>
+                                          <Tooltip text="Withdrawal/Deposit Transaction Information" />
+                                       </tooltip></TableView>
+                                 </content>
+                              </ScrollPane>
+                              <AnchorPane layoutY="461.0" prefHeight="25.0" prefWidth="107.0" AnchorPane.bottomAnchor="28.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                 <children>
+                                    <Button fx:id="printSavings" mnemonicParsing="false" onAction="#printSavings" text="Print" textFill="#363434" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                    <Button fx:id="snapShotSaving" mnemonicParsing="false" onAction="#snapShotSaving" text="SnapShot" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                              <VBox fx:id="wvb" layoutX="-2.0" layoutY="-5.0" prefHeight="105.0" prefWidth="105.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <Label alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="17.0" prefWidth="121.0" text="Suntrade Customer Account Statement" textAlignment="JUSTIFY">
+                                       <font>
+                                          <Font name="System Bold Italic" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="fullname" alignment="CENTER_RIGHT" maxWidth="1.7976931348623157E308" prefHeight="24.0" prefWidth="105.0" textAlignment="RIGHT">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="accNumber" alignment="CENTER_RIGHT" contentDisplay="RIGHT" maxWidth="1.7976931348623157E308" prefHeight="28.0" prefWidth="105.0" textAlignment="RIGHT">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab closable="false" text="Loan/Credit Transaction">
+                    <content>
+                      <AnchorPane fx:id="printLoan">
+                           <children>
+                              <ScrollPane fitToHeight="true" fitToWidth="true" layoutY="104.0" prefHeight="389.0" prefViewportHeight="514.0" prefViewportWidth="105.0" prefWidth="105.0" AnchorPane.bottomAnchor="56.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="104.0">
+                                 <content>
+                                    <TableView fx:id="loanTable" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </content>
+                              </ScrollPane>
+                              <VBox fx:id="lvb" prefHeight="105.0" prefWidth="105.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <Label alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="17.0" prefWidth="121.0" text="Suntrade Customer Account Statement" textAlignment="JUSTIFY">
+                                       <font>
+                                          <Font name="System Bold Italic" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="fullname1" alignment="CENTER_RIGHT" maxWidth="1.7976931348623157E308" prefHeight="24.0" prefWidth="105.0" textAlignment="RIGHT">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="accNumber1" alignment="CENTER_RIGHT" maxWidth="1.7976931348623157E308" prefHeight="28.0" prefWidth="112.0" textAlignment="RIGHT">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <AnchorPane layoutY="499.0" prefHeight="30.0" prefWidth="105.0" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                 <children>
+                                    <Button fx:id="printSavings1" mnemonicParsing="false" onAction="#printSavings" text="Print" textFill="#363434" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                    <Button fx:id="snapShotSaving1" mnemonicParsing="false" onAction="#snapShotSaving" text="SnapShot" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+               </tabs>
+            </TabPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="addable" maxWidth="-Infinity" minWidth="0.0" prefHeight="200.0" prefWidth="300.0">
+         <children>
+            <SplitPane dividerPositions="0.5, 0.5" layoutY="28.0" orientation="VERTICAL" prefHeight="486.0" prefWidth="300.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="28.0">
+               <items>
+                  <ListView fx:id="loanList" layoutY="26.0" minHeight="200.0" prefHeight="202.0" prefWidth="298.0" AnchorPane.bottomAnchor="161.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="26.0" />
+                  <TableView fx:id="loanminitab" layoutX="1.0" layoutY="300.0" minHeight="150.0" prefHeight="161.0" prefWidth="354.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <columns>
+                        <TableColumn fx:id="loanIdCol" prefWidth="75.0" text="Loan ID" />
+                        <TableColumn fx:id="loanTotalCol" prefWidth="75.0" text="Loan Total" />
+                        <TableColumn fx:id="loanBalanceCol" prefWidth="75.0" text="Balance" />
+                     </columns>
+                  </TableView>
+                  <PieChart fx:id="chart" maxHeight="1.7976931348623157E308" />
+               </items>
+            </SplitPane>
+            <Label alignment="CENTER" layoutY="-1.0" prefHeight="30.0" prefWidth="298.0" text="Loan History" textFill="TEAL" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+  </items>
+</SplitPane>

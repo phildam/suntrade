@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+<Departments>
+    
+    <unit name="visitation">
+        
+        <boss bossName ="Pastor dude">  </boss>
+        <email email = "dude@gmail.com">  </email>
+        <phonenumber contact ="08109183842">   </phonenumber>
+    </unit>
+    
+    <unit name="santuary">
+        
+        <boss bossName ="Pastor santa">  </boss>
+        <email email = "Tech@gmail.com">  </email>
+        <phonenumber contact ="08109183842">   </phonenumber>
+    </unit>
+    
+    <unit name="santuary">
+        
+        <boss bossName ="Pastor santa">  </boss>
+        <email email = "santuary@gmail.com">  </email>
+        <phonenumber contact ="08109183842">   </phonenumber>
+    </unit>
+    
+    <unit name="usher">
+        
+        <boss bossName ="Pastor usher">  </boss>
+        <email email = "user@gmail.com">  </email>
+        <phonenumber contact ="08109183842">   </phonenumber>
+    </unit>
+    
+    <unit name="children">
+        
+        <boss bossName ="Pastor hil">  </boss>
+        <email email = "santuary@gmail.com">  </email>
+        <phonenumber contact ="08109183842">   </phonenumber>
+    </unit>
+    
+    <unit name="security">
+        
+        <boss bossName ="Pastor set">  </boss>
+        <email email = "security@gmail.com">  </email>
+        <phonenumber contact ="08109183842">   </phonenumber>
+    </unit>
+    
+    <unit name="choir">
+        
+        <boss bossName ="Pastor cho">  </boss>
+        <email email = "choir@mail.com">  </email>
+        <phonenumber contact ="08109183842">   </phonenumber>
+    </unit>
+    
+    <unit name="hospitality">
+        
+        <boss bossName="Pastor peter">  </boss>
+        <email email="hospitality@mail.com">  </email>
+        <phonenumber contact="09012345649">   </phonenumber>
+    </unit>
+    
+    <unit name="evangelism">
+        
+        <boss bossName="Pastor champ">  </boss>
+        <email email="champ@mail.com">  </email>
+        <phonenumber contact="09012345649">   </phonenumber>
+    </unit>
+    
+    <unit name="decoration">
+        
+        <boss bossName="Pastor win">  </boss>
+        <email email="win@gmail.com">  </email>
+        <phonenumber contact="07388299132">   </phonenumber>
+    </unit>
+    
+    <unit name="multiMedia">
+        
+        <boss>  </boss>
+        <email>  </email>
+        <phonenumber>   </phonenumber>
+    </unit>
+    
+    <unit name="adminstration">
+        
+        <boss>  </boss>
+        <email>  </email>
+        <phonenumber>   </phonenumber>
+    </unit>
+    
+    <unit name="beautification">
+        
+        <boss>  </boss>
+        <email>  </email>
+        <phonenumber>   </phonenumber>
+    </unit>
+    
+    <unit name="counseling">
+        
+        <boss>  </boss>
+        <email>  </email>
+        <phonenumber>   </phonenumber>
+    </unit>
+    <unit name="church planting">
+        
+        <boss>  </boss>
+        <email>  </email>
+        <phonenumber>   </phonenumber>
+    </unit>
+    <unit name="transportation">
+        
+        <boss>  </boss>
+        <email>  </email>
+        <phonenumber>   </phonenumber>
+    </unit>
+    <unit name="public relations">
+        
+        <boss>  </boss>
+        <email>  </email>
+        <phonenumber>   </phonenumber>
+    </unit>
+    <unit name="youth">
+        
+        <boss>  </boss>
+        <email>  </email>
+        <phonenumber>   </phonenumber>
+    </unit>
+    <unit name="family connection">
+        
+        <boss>  </boss>
+        <email>  </email>
+        <phonenumber>   </phonenumber>
+    </unit>
+    <unit name="counseling">
+        
+        <boss>  </boss>
+        <email>  </email>
+        <phonenumber>   </phonenumber>
+    </unit>
+    <unit name="community building">
+        
+        <boss>  </boss>
+        <email>  </email>
+        <phonenumber>   </phonenumber>
+    </unit>
+    <unit name="maintenance">
+        <boss>  </boss>
+        <email>  </email>
+        <phonenumber>   </phonenumber>
+    </unit>
+    <unit name="publication">
+        <boss>  </boss>
+        <email>  </email>
+        <phonenumber>   </phonenumber>
+    </unit>
+    <unit name="information technology">
+        <boss>  </boss>
+        <email>  </email>
+        <phonenumber>   </phonenumber>
+    </unit>
+    <unit name="protocol">
+        <boss>  </boss>
+        <email>  </email>
+        <phonenumber>   </phonenumber>
+    </unit>
+    <unit name="prayer">
+        <boss>  </boss>
+        <email>  </email>
+        <phonenumber>   </phonenumber>
+    </unit>
+    <unit name="drama">
+        <boss>  </boss>
+        <email>  </email>
+        <phonenumber>   </phonenumber>
+    </unit>
+    <unit name="praise and worship">
+        <boss>  </boss>
+        <email>  </email>
+        <phonenumber>   </phonenumber>
+    </unit>
+    
+</Departments>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Feb 12, 2016 2:24:21 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="entities.Databaseset" optimistic-lock="version" schema="SUNTRADE" table="DATABASESET">
+    <id name="id" type="int">
+      <column name="ID"/>
+      <generator class="native"/>
+    </id>
+    <property name="account" type="java.lang.Boolean">
+      <column name="ACCOUNT"/>
+    </property>
+    <property name="groups" type="java.lang.Boolean">
+      <column name="GROUPS"/>
+    </property>
+    <property name="customer" type="java.lang.Boolean">
+      <column name="CUSTOMER"/>
+    </property>
+    <property name="transact" type="java.lang.Boolean">
+      <column name="TRANSACT"/>
+    </property>
+    <property name="settings" type="java.lang.Boolean">
+      <column name="SETTINGS"/>
+    </property>
+    <property name="loanrepayment" type="java.lang.Boolean">
+      <column name="LOANREPAYMENT"/>
+    </property>
+    <property name="loan" type="java.lang.Boolean">
+      <column name="LOAN"/>
+    </property>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Feb 12, 2016 2:24:21 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="entities.Setting" optimistic-lock="version" schema="SUNTRADE" table="SETTING">
+    <id name="id" type="int">
+      <column name="ID"/>
+      <generator class="native"/>
+    </id>
+    <property name="username" type="string">
+      <column length="250" name="USERNAME"/>
+    </property>
+    <property name="password" type="string">
+      <column length="250" name="PASSWORD"/>
+    </property>
+    <property name="pictureurl" type="string">
+      <column length="250" name="PICTUREURL"/>
+    </property>
+    <property name="skipformcheck" type="java.lang.Boolean">
+      <column name="SKIPFORMCHECK"/>
+    </property>
+    <property name="snapshot" type="java.lang.Boolean">
+      <column name="SNAPSHOT"/>
+    </property>
+    <property name="screenshot" type="java.lang.Boolean">
+      <column name="SCREENSHOT"/>
+    </property>
+    <property name="stylesheet" type="string">
+      <column length="250" name="STYLESHEET"/>
+    </property>
+  </class>
+</hibernate-mapping>

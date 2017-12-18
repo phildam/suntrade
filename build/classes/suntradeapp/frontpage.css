@@ -1,0 +1,32 @@
+
+.frontpage Button{
+    
+    -fx-text-fill: teal;
+    -fx-border-color: white;
+    -fx-border-radius: 500;
+    -fx-background-radius: 500;
+    -fx-background-color: transparent;
+    
+    -fx-font: italic bold 20 san-serif;
+}
+
+
+.frontpage Button:hover{
+    -fx-text-fill: white;
+    -fx-background-color: #6699FF;
+    -fx-border-color: white;
+    -fx-scale-shape: true;
+    -fx-font: italic bold 16 san-serif;
+    
+}
+
+#frontPage{
+    -fx-background-image:url(../images/suntradelogo.png);
+    -fx-background-repeat:no-repeat;
+    -fx-background-size:cover;
+     -fx-background-color: rgb(0,0,0);
+}
+.toolbarBut:hover{
+    -fx-border-color: teal;
+    -fx-background-color:#ccccff;
+}

@@ -1,0 +1,31 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+
+BorderPane{
+    -fx-background-color:rgba(0,0,0,0.2);
+}
+AnchorPane{
+    -fx-background-color:rgba(0,0,0,0.8);
+    -fx-background-image:url(../icons/whiteBg.png);
+    -fx-background-repeat:no-repeat;
+    -fx-background-size:contain;
+    -fx-background-radius:50;
+    -fx-border-radius:50;
+}
+
+Button{
+    -fx-background-radius:50;
+    -fx-border-radius:50;
+    -fx-border-color:teal;
+}
+
+TextField{
+    -fx-background-radius:10;
+    -fx-border-radius:10;
+    -fx-border-color:teal;
+}

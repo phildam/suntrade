@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Feb 12, 2016 2:24:21 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="entities.Account" table="ACCOUNT" schema="SUNTRADE">
+        <id name="accountNumber" type="string">
+            <column name="ACCOUNT_NUMBER" length="250" />
+            <generator class="assigned"></generator>
+        </id>
+        <property name="balance" type="java.lang.Double">
+            <column name="BALANCE" precision="52" scale="0" />
+        </property>
+        <property name="dateModified" type="date">
+            <column name="DATE_MODIFIED" length="10" />
+        </property>
+        <property name="active" type="java.lang.Boolean">
+      <column name="ACTIVE"/>
+    </property>
+    </class>
+</hibernate-mapping>

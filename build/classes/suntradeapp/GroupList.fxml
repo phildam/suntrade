@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.web.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane minHeight="-Infinity" prefHeight="451.0" prefWidth="756.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="suntradeapp.GroupListController">
+   <children>
+      <Label minWidth="-Infinity" prefHeight="24.0" prefWidth="234.0" text="SunTrade Account Group List" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="522.0" AnchorPane.topAnchor="0.0" />
+      <ScrollPane fx:id="unitUpdateScrollPane" fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" layoutX="3.0" layoutY="26.0" maxWidth="-Infinity" prefHeight="425.0" prefViewportHeight="229.0" prefViewportWidth="103.0" prefWidth="181.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="26.0">
+         <content>
+            <VBox fx:id="updateUnitBox" spacing="10.0">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </VBox>
+         </content>
+      </ScrollPane>
+      <ScrollPane fitToHeight="true" fitToWidth="true" layoutX="183.0" layoutY="28.0" prefViewportHeight="397.0" prefViewportWidth="573.0" AnchorPane.bottomAnchor="24.0" AnchorPane.leftAnchor="181.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="28.0">
+         <content>
+            <TableView fx:id="GroupMembers" layoutX="181.0" layoutY="28.0" prefHeight="397.0" prefWidth="573.0" AnchorPane.bottomAnchor="26.0" AnchorPane.leftAnchor="183.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="28.0" />
+         </content>
+      </ScrollPane>
+      <Label fx:id="groupReporter" layoutX="181.0" layoutY="425.0" prefHeight="24.0" prefWidth="573.0" text="Label" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="181.0" AnchorPane.rightAnchor="-0.0" />
+      <TextField fx:id="searchGroup" layoutX="236.0" layoutY="2.0" maxWidth="1.7976931348623157E308" minWidth="50.0" onAction="#searchResult" onKeyReleased="#searchResultOnEnter" prefHeight="25.0" prefWidth="387.0" promptText="Search In Selected Group" AnchorPane.leftAnchor="236.0" AnchorPane.rightAnchor="133.0" AnchorPane.topAnchor="2.0" />
+      <ChoiceBox fx:id="searchBy" layoutX="623.0" layoutY="2.0" maxWidth="-Infinity" minWidth="10.0" prefHeight="25.0" prefWidth="133.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="2.0" />
+   </children>
+</AnchorPane>

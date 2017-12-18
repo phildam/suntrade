@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Feb 12, 2016 2:24:21 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="entities.Loan" table="LOAN" schema="SUNTRADE">
+        <id name="customerLoanNumber" type="string">
+            <column name="CUSTOMER_LOAN_NUMBER" length="250" />
+            <generator class="assigned"></generator>
+        </id>
+        <property name="accountNumber" type="string">
+            <column name="ACCOUNT_NUMBER" length="250" />
+        </property>
+        <property name="totalistallmentdays" type="string">
+            <column name="TOTALISTALLMENTDAYS" length="250" />
+        </property>
+        <property name="loanAmount" type="java.lang.Double">
+            <column name="LOAN_AMOUNT" precision="52" scale="0" />
+        </property>
+        <property name="serviceCharge" type="java.lang.Double">
+            <column name="SERVICE_CHARGE" precision="52" scale="0" />
+        </property>
+        <property name="loantotal" type="java.lang.Double">
+            <column name="LOANTOTAL" precision="52" scale="0" />
+        </property>
+        <property name="currentLoanBalance" type="java.lang.Double">
+            <column name="CURRENT_LOAN_BALANCE" precision="52" scale="0" />
+        </property>
+        <property name="loantype" type="string">
+            <column name="LOANTYPE" length="250" />
+        </property>
+        <property name="dateofdisbursement" type="date">
+            <column name="DATEOFDISBURSEMENT" length="10" />
+        </property>
+        <property name="weeklyInstallment" type="java.lang.Double">
+            <column name="WEEKLY_INSTALLMENT" precision="52" scale="0" />
+        </property>
+        <property name="loanCompleteStatus" type="string">
+            <column name="LOAN_COMPLETE_STATUS" length="250" />
+        </property>
+    </class>
+</hibernate-mapping>

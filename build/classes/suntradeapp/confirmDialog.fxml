@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane id="confirmBorderPane" fx:id="borderPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="482.0" prefWidth="758.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="suntradeapp.ConfirmDialogController">
+   <center>
+      <AnchorPane id="confirmAnchorPane" fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="306.0" prefWidth="405.0" style="-fx-background-radius: 30; -fx-border-width: 10; -fx-position-shape: circle;" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="username" layoutX="92.0" layoutY="119.0" prefHeight="25.0" prefWidth="230.0" promptText="username" />
+            <Button fx:id="confirmAction" layoutX="177.0" layoutY="212.0" mnemonicParsing="false" onAction="#confirmAction" text="Confirm" />
+            <Button fx:id="closeButton" layoutX="361.0" layoutY="14.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#closeWindow" prefHeight="30.0" prefWidth="30.0" style="-fx-text-fill: red; -fx-background-color: transparent;" text="X" textFill="#f50707" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Label fx:id="infoLabel" layoutY="284.0" prefHeight="28.0" prefWidth="405.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+            <PasswordField fx:id="password" layoutX="92.0" layoutY="170.0" onAction="#pass" prefHeight="25.0" prefWidth="230.0" promptText="password" />
+         </children>
+         <effect>
+            <DropShadow radius="22.54" width="71.16" />
+         </effect>
+      </AnchorPane>
+   </center>
+</BorderPane>

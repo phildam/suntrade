@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.DerbyDialect</property>
+    <property name="hibernate.connection.driver_class">org.apache.derby.jdbc.EmbeddedDriver</property>
+    <property name="hibernate.connection.url">jdbc:derby:suntrade;create=true</property>
+    <property name="hibernate.connection.username">suntrade</property>
+    <property name="hibernate.connection.password">suntrade</property>
+    <property name="hibernate.show_sql">true</property>
+    <property name="hibernate.query.factory_class">org.hibernate.hql.internal.classic.ClassicQueryTranslatorFactory</property>
+    <mapping resource="entities/Transact.hbm.xml"/>
+    <mapping resource="entities/Account.hbm.xml"/>
+    <mapping resource="entities/Groups.hbm.xml"/>
+    <mapping resource="entities/Customer.hbm.xml"/>
+    <mapping resource="entities/Loan.hbm.xml"/>
+    <mapping resource="entities/Loanrepayment.hbm.xml"/>
+    <mapping resource="entities/Databaseset.hbm.xml"/>
+    <mapping resource="entities/Setting.hbm.xml"/>
+  </session-factory>
+</hibernate-configuration>

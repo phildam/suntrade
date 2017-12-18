@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<SplitPane dividerPositions="0.13591022443890274" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="400.0" prefHeight="567.0" prefWidth="804.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="suntradeapp.AccountManagerController">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="300.0" prefHeight="468.0" prefWidth="605.0">
+         <children>
+            <BorderPane fx:id="loaderCore" prefHeight="468.0" prefWidth="649.0" style="-: #65cad3;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <center>
+                  <VBox fx:id="formVBox1" maxHeight="-Infinity" maxWidth="-Infinity" minWidth="300.0" prefHeight="632.0" prefWidth="520.0" style="-fx-border-color: grey; -fx-background-color: white; -fx-border-radius: 20; -fx-padding: 10; -fx-border-width: 2; -fx-background-radius: 20;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Text fill="#485b3df5" layoutX="2.0" layoutY="23.58203125" strokeType="OUTSIDE" strokeWidth="0.0" text="SunTrade Account Opening Application " textAlignment="CENTER" wrappingWidth="503.13671875" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <effect>
+                              <SepiaTone />
+                           </effect>
+                           <font>
+                              <Font name="System Bold Italic" size="20.0" />
+                           </font>
+                        </Text>
+                        <ScrollPane fitToHeight="true" fitToWidth="true" layoutX="2.0" layoutY="32.0" maxWidth="-Infinity" prefViewportHeight="550.0" prefViewportWidth="500.0" prefWidth="500.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="32.0">
+                           <content>
+                              <VBox id="regform" maxWidth="-Infinity" onMouseMoved="#clear" prefHeight="552.0" prefWidth="500.0" spacing="5.0" style="-fx-background-color: white; -fx-border-color: grey; -fx-border-radius: 10; -fx-padding: 10; -fx-border-width: 2;" HBox.hgrow="NEVER">
+                                 <children>
+                                    <HBox>
+                                       <children>
+                                          <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="25.0" prefWidth="450.0" text="CUSTOMER PERSONAL DETAILS" textAlignment="CENTER" textFill="#7e8889">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets top="5.0" />
+                                             </padding>
+                                             <VBox.margin>
+                                                <Insets />
+                                             </VBox.margin>
+                                          </Label>
+                                          <Button fx:id="uploadButton" mnemonicParsing="false" onAction="#uploadImage" text="upload" />
+                                       </children>
+                                    </HBox>
+                                    <HBox>
+                                       <children>
+                                          <VBox prefHeight="132.0" prefWidth="386.0" spacing="5.0">
+                                             <children>
+                                                <TextField fx:id="sSurname" prefHeight="27.0" prefWidth="128.0" promptText="surname" />
+                                                <TextField fx:id="sOthername" prefHeight="27.0" prefWidth="128.0" promptText="Other Names" />
+                                                <TextField fx:id="sEmailAddr" prefHeight="27.0" prefWidth="144.0" promptText="Email Address" VBox.vgrow="ALWAYS" />
+                                                <TextField fx:id="sMobileNumber" prefHeight="27.0" prefWidth="212.0" promptText="Mobile Phone Number" VBox.vgrow="ALWAYS" />
+                                                <DatePicker fx:id="sDateOFBirth" maxHeight="27.0" prefHeight="27.0" prefWidth="378.0" promptText="Date of Birth" />
+                                             </children>
+                                             <padding>
+                                                <Insets right="10.0" />
+                                             </padding>
+                                          </VBox>
+                                          <VBox style="-fx-border-color: green; -fx-padding: 5; -fx-border-radius: 5; -fx-border-color: grey;">
+                                             <children>
+                                                <ImageView fx:id="accountPassport" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../../../../Pictures/recover/14DD6D~8%20-%20Copy.JPG" />
+                                                   </image>
+                                                   <HBox.margin>
+                                                      <Insets right="5.0" top="5.0" />
+                                                   </HBox.margin>
+                                                   <VBox.margin>
+                                                      <Insets bottom="5.0" />
+                                                   </VBox.margin>
+                                                </ImageView>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                    <TextField fx:id="sOccupation" prefHeight="27.0" prefWidth="128.0" promptText="Occupation" />
+                                    <HBox prefHeight="26.0" prefWidth="507.0" spacing="15.0">
+                                       <children>
+                                          <Label prefHeight="25.0" prefWidth="85.0" text="Gender" textFill="#7e8889">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <ChoiceBox fx:id="sGender" prefHeight="25.0" prefWidth="122.0" style="-fx-background-color: #E0E0E0;" />
+                                          <Label prefHeight="25.0" prefWidth="113.0" text="Marital Status" textFill="#7e8889">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <ChoiceBox fx:id="sMaritalStat" prefHeight="25.0" prefWidth="157.0" style="-fx-background-color: #E0E0E0;" />
+                                       </children>
+                                    </HBox>
+                                    <TextField fx:id="sAddress" prefHeight="27.0" prefWidth="128.0" promptText="Address" VBox.vgrow="ALWAYS" />
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="30.0" prefWidth="553.0" style="-fx-text-fill: ;" text="SUNTRADE  CUSTOMER'S ACCOUNT DETAILS" textAlignment="CENTER" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold Italic" size="14.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets bottom="5.0" top="5.0" />
+                                       </padding>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                    </Label>
+                                    <HBox prefHeight="112.0" prefWidth="522.0" spacing="10.0">
+                                       <children>
+                                          <VBox prefHeight="108.0" prefWidth="266.0" spacing="2.0" style="-fx-border-color: #6495ED; -fx-padding: 10;">
+                                             <children>
+                                                <HBox>
+                                                   <children>
+                                                      <TextField fx:id="sPassbookNumber" maxHeight="27.0" prefHeight="27.0" prefWidth="237.0" promptText="Passbook Number" />
+                                                   </children>
+                                                </HBox>
+                                                <TextField fx:id="openingBalance" maxHeight="27.0" prefHeight="27.0" prefWidth="199.0" promptText="opening Balance" />
+                                                <TextField fx:id="sGroupNumber" prefHeight="25.0" prefWidth="173.0" promptText="Group Number" />
+                                             </children>
+                                          </VBox>
+                                          <VBox prefHeight="108.0" prefWidth="250.0" spacing="3.0" style="-fx-border-color: #6495ED; -fx-padding: 10;">
+                                             <children>
+                                                <HBox>
+                                                   <children>
+                                                      <Label prefHeight="25.0" prefWidth="68.0" text="Country" textFill="#7e8889">
+                                                         <font>
+                                                            <Font name="System Bold Italic" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <ChoiceBox fx:id="sCountry" prefHeight="25.0" prefWidth="141.0" style="-fx-background-color: #E0E0E0;" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox>
+                                                   <children>
+                                                      <TextField fx:id="sState" maxHeight="27.0" prefHeight="27.0" prefWidth="205.0" promptText="State of Origin" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox>
+                                                   <children>
+                                                      <TextField fx:id="sLGA" maxHeight="27.0" prefHeight="27.0" prefWidth="214.0" promptText="Local Goverment" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox>
+                                                   <children>
+                                                      <Label prefHeight="25.0" prefWidth="100.0" text="Group  Name" textFill="#7e8889">
+                                                         <font>
+                                                            <Font name="System Bold Italic" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <ChoiceBox fx:id="sGroupName" prefHeight="25.0" prefWidth="97.0" style="-fx-background-color: #E0E0E0;" />
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                    <HBox spacing="5.0">
+                                       <children>
+                                          <DatePicker fx:id="sIssuingDate" maxHeight="27.0" prefHeight="27.0" prefWidth="277.0" promptText="Issuing Date" showWeekNumbers="true" />
+                                          <TextField fx:id="sIssuingName" prefHeight="25.0" prefWidth="257.0" promptText="Issuing Name" />
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="44.0" prefWidth="457.0">
+                                       <children>
+                                          <Separator prefHeight="25.0" prefWidth="181.0" visible="false" HBox.hgrow="ALWAYS" />
+                                          <Button id="saveInfo" fx:id="saveInfo" alignment="CENTER" contentDisplay="CENTER" defaultButton="true" mnemonicParsing="false" onAction="#savetoDatabase" prefHeight="25.0" prefWidth="120.0" text="Create Account" textFill="#fff2f2" VBox.vgrow="NEVER" />
+                                          <Separator prefHeight="25.0" prefWidth="172.0" visible="false" HBox.hgrow="ALWAYS" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </VBox.margin>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </VBox>
+                           </content>
+                        </ScrollPane>
+                        <Label fx:id="errorLabel" alignment="CENTER" layoutX="2.0" layoutY="584.0" prefHeight="23.0" prefWidth="581.0" textFill="#e02619" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                           <font>
+                              <Font name="System Bold Italic" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <effect>
+                        <DropShadow height="53.62" radius="26.31" width="53.62" />
+                     </effect>
+                  </VBox>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane maxWidth="250.0" minWidth="0.0" prefHeight="468.0" prefWidth="250.0">
+         <children>
+            <ListView fx:id="formreport" layoutX="14.0" layoutY="26.0" prefHeight="539.0" prefWidth="250.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="26.0" />
+            <Label alignment="CENTER" layoutX="6.0" layoutY="6.0" prefHeight="26.0" prefWidth="250.0" text="Report Log" textFill="TEAL" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+  </items>
+</SplitPane>

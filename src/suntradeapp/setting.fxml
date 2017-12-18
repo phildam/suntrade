@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="borderpane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="574.0" prefWidth="729.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="suntradeapp.SettingController">
+   <center>
+      <VBox id="confirmAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="281.0" prefWidth="397.0" spacing="10.0" style="-fx-background-color: transparent;" BorderPane.alignment="CENTER">
+         <children>
+            <HBox layoutX="10.0" layoutY="239.0" maxWidth="-Infinity" prefHeight="207.0" prefWidth="376.0" spacing="5.0" style="-fx-background-radius: 5; -fx-background-color: teal;">
+               <children>
+                  <VBox layoutX="17.0" layoutY="239.0" prefHeight="197.0" prefWidth="182.0" spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="239.0">
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="257.0" style="-fx-text-fill: white;" text="Change Login Details" />
+                        <TextField fx:id="oldusername" promptText="Old Username" />
+                        <TextField fx:id="newUsername" promptText="New Usename" />
+                        <Button fx:id="changeUsername" mnemonicParsing="false" onAction="#changeUsernameDetails" text="Change username" />
+                        <PasswordField fx:id="oldPassword" promptText="Old Password">
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </PasswordField>
+                        <PasswordField fx:id="newPassword" promptText="New Password" />
+                        <PasswordField fx:id="reEnterPass" promptText="Re-enter password" />
+                        <Button fx:id="changePassword" mnemonicParsing="false" onAction="#changePassword" prefHeight="25.0" prefWidth="113.0" text="Change Password" />
+                     </children>
+                     <padding>
+                        <Insets left="5.0" right="5.0" />
+                     </padding>
+                  </VBox>
+                  <VBox prefHeight="197.0" prefWidth="178.0" spacing="5.0">
+                     <children>
+                        <Button fx:id="closeSettings" mnemonicParsing="false" onAction="#closeSettings" prefHeight="25.0" prefWidth="38.0" style="-fx-background-radius: 1000; -fx-border-radius: 500; -fx-background-color: rgba(0,0,0,0.3);" text="X" textFill="RED">
+                           <VBox.margin>
+                              <Insets left="140.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <CheckBox fx:id="skipFormCheck" mnemonicParsing="false" onAction="#skipFormCheck" prefHeight="17.0" prefWidth="177.0" style="-fx-text-fill: white;" text="Skip Form Check" />
+                        <CheckBox fx:id="activateSnapShot" mnemonicParsing="false" onAction="#activateSnapShot" prefHeight="17.0" prefWidth="176.0" text="Activate SnapShot" visible="false" />
+                        <CheckBox fx:id="activateScreenCapture" mnemonicParsing="false" onAction="#activateScreenCapture" prefHeight="17.0" prefWidth="182.0" text="Activate ScreenCapture" visible="false" />
+                        <TextField fx:id="folderLoc" editable="false">
+                           <tooltip>
+                              <Tooltip fx:id="folderTooltip" text="Empty Tooltip" />
+                           </tooltip></TextField>
+                        <Button fx:id="defaultFolder" mnemonicParsing="false" onAction="#setdeffolder" prefHeight="25.0" prefWidth="195.0" text="Change file folder" />
+                        <Button fx:id="backupDb" mnemonicParsing="false" onAction="#backupDb" prefHeight="25.0" prefWidth="176.0" text="Backup Database">
+                           <VBox.margin>
+                              <Insets top="30.0" />
+                           </VBox.margin></Button>
+                        <Button fx:id="restore" mnemonicParsing="false" onAction="#restoreDb" prefHeight="25.0" prefWidth="186.0" text="Restore DataBase Backup" />
+                     </children>
+                  </VBox>
+               </children>
+               <effect>
+                  <DropShadow />
+               </effect>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </HBox>
+            <ProgressBar fx:id="progress" prefHeight="18.0" prefWidth="381.0" />
+            <Label fx:id="infoLabel" prefHeight="23.0" prefWidth="506.0" textFill="TEAL">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Label>
+         </children>
+         <padding>
+            <Insets left="10.0" right="10.0" />
+         </padding>
+      </VBox>
+   </center>
+</BorderPane>
